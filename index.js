@@ -3,14 +3,19 @@ var newName;
 var linePosition;
 var realPosition;
 
-//katzDeliLine = ["Ada", "Grace", "Kent"];
-function takeANumber(katzDeliLine, newName ){
+  var howManyServed = 0
+//katzDeliLine = [150, 151, 152];
+function takeANumber(katzDeliLine){
   
-  
-  katzDeliLine.push(newName);
+  if (katzDeliLine.length > 0)
+  {
+  katzDeliLine.push(katzDeliLine.length);
+  katzDeliLine = katzDeliLine + 1;
   linePosition = katzDeliLine.length;
-  return "Welcome, " + newName + ". You are number " + linePosition + " in line."
+  howManyServed = howManyServed + 1;
   
+  return "Welcome. You are number " + linePosition + " in line."
+  }
  }
 
 function nowServing(katzDeliLine)
