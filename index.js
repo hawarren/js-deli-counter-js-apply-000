@@ -7,15 +7,13 @@ var realPosition;
 //katzDeliLine = [150, 151, 152];
 function takeANumber(katzDeliLine){
   
-  if (katzDeliLine.length > 0)
-  {
-  katzDeliLine.push(katzDeliLine.length);
-  katzDeliLine = katzDeliLine + 1;
-  linePosition = katzDeliLine.length;
-  howManyServed = howManyServed + 1;
   
+    howManyServed  = howManyServed + 1;
+    katzDeliLine.push(howManyServed);
+    linePosition = katzDeliLine.length;
+ 
   return "Welcome. You are number " + linePosition + " in line."
-  }
+  
  }
 
 function nowServing(katzDeliLine)
@@ -24,8 +22,8 @@ function nowServing(katzDeliLine)
   {
     //shift method returns the removed item
     
-   var personNow = katzDeliLine.shift();
-    var message = "Currently serving " + personNow + ".";
+   var numberNow = katzDeliLine.shift();
+    var message = "Currently serving " + numberNow + ".";
     return message;
 }
  else {
