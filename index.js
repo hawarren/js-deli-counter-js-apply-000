@@ -1,19 +1,16 @@
 var katzDeliLine = [];
-var newName = [];
+var newName;
 var linePosition;
+var realPosition;
+
 //katzDeliLine = ["Ada", "Grace", "Kent"];
-function takeANumber(katzDeliLine){
+function takeANumber(katzDeliLine, newName ){
   
-  if (katzDeliLine.length() > 0){
-    
-  linePosition = linePosition + 1;
-  return linePosition;
-  }
-  else
-  {
-    linePosition = 1;
-    return linePosition;
-  }
+  
+  katzDeliLine.push(newName);
+  linePosition = katzDeliLine.length;
+  return "Welcome, " + newName + ". You are number " + linePosition + " in line."
+  
  }
 
 function nowServing(katzDeliLine)
@@ -25,16 +22,7 @@ function nowServing(katzDeliLine)
    var personNow = katzDeliLine.shift();
     var message = "Currently serving " + personNow + ".";
     return message;
-// var removePerson = katzDeliLine[0];
- 
- 
- //var index = katzDeliLine.indexOf(removePerson);
- //if (index > -1){
- //katzDeliLine.splice(index, 1);
- 
-
-  //return "Currently serving " + (removePerson );
- } 
+}
  else {
      return "There is nobody waiting to be served!";
  }
